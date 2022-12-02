@@ -39,6 +39,18 @@ contactForm.addEventListener("submit", (e) => {
 
     const payload = {name, email, message, key}
 
+    const functionAddress = "https://vanilla-dev-site.netlify.app/.netlify/functions/contactForm"
+
+    const postSettings = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+    };
+
+    fetch(functionAddress, postSettings)
+
     
     console.log(e)
     console.log({name, email, message})
