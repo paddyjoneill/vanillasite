@@ -11,6 +11,11 @@ const validateEmail = (email) => {
     return regExp.test(email);
 };
 
+const generateKey = () => {
+    const utc = new Date().getTime();
+    return window.btoa(utc.toString());
+};
+
 contactForm.addEventListener("submit", (e) => {
     e.preventDefault()
     const name = document.getElementById("name").value;
@@ -29,6 +34,10 @@ contactForm.addEventListener("submit", (e) => {
         setThenClearMessage("Please Enter a Message");
         return;
     }
+
+    const key = generateKey()
+
+    const payload = {name, email, message, key}
 
     
     console.log(e)
