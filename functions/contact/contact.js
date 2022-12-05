@@ -43,7 +43,7 @@ const handler = async (event) => {
       name,
       to,
       message,
-      phone,
+      phone: "",
       secret,
   };
 
