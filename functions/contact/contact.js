@@ -1,3 +1,5 @@
+const fetch = require("node-fetch");
+
 const { SECRET_KEY, EMAIL_LAMBDA } = process.env;
 
 // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
