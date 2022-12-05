@@ -78,14 +78,10 @@ darkModeButton.addEventListener("click", () => {
         }
         dark = true;
     } else {
-    for(key of Object.keys(colors)){
-        console.log(key, colors)
-        root.style.setProperty(key, colors[key].light)
+        for(key of Object.keys(colors)){
+            console.log(key, colors)
+            root.style.setProperty(key, colors[key].light)
+        }
+        dark = false;
     }
-    dark = false;
-    }
-    // see if in light/dark mode?
-    // set local storage?
-    // change css variables
-    // switch out button/toggle classes?
 })

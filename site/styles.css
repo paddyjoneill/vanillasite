@@ -22,7 +22,7 @@ header {
 header > button {
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
+    background-color: transparent;
     border: solid;
     border-width: 1px;
     border-radius: 0.25rem;
@@ -31,8 +31,8 @@ header > button {
     width: 1.625rem;
 }
 
-header > button > img {
-    fill: var(--heading-color);
+header > button > svg {
+    stroke: var(--heading-color);
     background-color: var(--background-color);
     margin: 2px;
 }
@@ -88,6 +88,10 @@ p {
 
 .offer-item > div {
     margin-left: 1rem;
+}
+
+.offer-item svg {
+    stroke: var(--heading-color)
 }
 
 
@@ -178,6 +182,11 @@ footer {
 
 footer img {
     fill: var(--heading-color)
+}
+
+footer svg {
+    stroke: var(--heading-color);
+    fill: var(--heading-color);
 }
 
 footer a:last-child {
