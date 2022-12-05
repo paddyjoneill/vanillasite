@@ -1,0 +1,22 @@
+{
+  "name": "vanillasite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paddyjoneill/vanillasite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paddyjoneill/vanillasite/issues"
+  },
+  "homepage": "https://github.com/paddyjoneill/vanillasite#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.0"
+  }
+}
