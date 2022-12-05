@@ -97,7 +97,8 @@ p {
 }
 
 .offer-item svg {
-    stroke: var(--heading-color)
+    stroke: var(--heading-color);
+    min-width: 32px;
 }
 
 
