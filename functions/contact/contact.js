@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+const fetch = await import("node-fetch");
 
 const { SECRET_KEY, EMAIL_LAMBDA } = process.env;
 
