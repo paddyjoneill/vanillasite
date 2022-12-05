@@ -10,17 +10,17 @@ const handler = async (event) => {
 
   // const fetch = await import("node-fetch");
 
-  const payload = event.body;
+  const payload = JSON.parse(event.body);
 
   console.log({event})
   console.log({body: event.body})
 
-  // const { name, email, phone, message, key } = payload;
+  const { name, email, message, key } = payload;
 
-  const name = event.body.name
-  const email = event.body.email
-  const message = event.body.message
-  const key = event.body.key
+  // const name = event.body.name
+  // const email = event.body.email
+  // const message = event.body.message
+  // const key = event.body.key
 
   console.log("from payload", {name, email, message})
 
