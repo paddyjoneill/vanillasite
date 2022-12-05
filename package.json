@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/paddyjoneill/vanillasite#readme",
   "dependencies": {
-    "node-fetch": "^3.3.0"
+    "node-fetch": "^2.6.7"
   }
 }
