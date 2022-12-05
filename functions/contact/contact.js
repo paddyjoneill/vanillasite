@@ -1,4 +1,4 @@
-const fetch = await import("node-fetch");
+
 
 const { SECRET_KEY, EMAIL_LAMBDA } = process.env;
 
@@ -7,6 +7,8 @@ const handler = async (event) => {
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
+
+  const fetch = await import("node-fetch");
 
   const payload = event.body;
 
