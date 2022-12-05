@@ -1,4 +1,4 @@
-
+import fetch from "node-fetch"
 
 const { SECRET_KEY, EMAIL_LAMBDA } = process.env;
 
@@ -8,7 +8,7 @@ const handler = async (event) => {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
 
-  const fetch = await import("node-fetch");
+  // const fetch = await import("node-fetch");
 
   const payload = event.body;
 
