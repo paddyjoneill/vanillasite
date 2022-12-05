@@ -6,8 +6,7 @@ const handler = async (event) => {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
 
-  const payload = req.body;
-
+  const payload = event.body;
 
   const { name, email, phone, message, key } = payload;
 
