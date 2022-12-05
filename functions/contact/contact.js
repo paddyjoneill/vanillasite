@@ -37,6 +37,8 @@ const handler = async (event) => {
       secret,
   };
 
+  console.log(payloadToForward)
+
   const response = await fetch(url, {
     method: 'POST',
     headers: {
