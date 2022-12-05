@@ -1,6 +1,18 @@
 const contactForm = document.getElementById("contactForm");
 const response = document.getElementById("contactFormResponse");
 const submitButton = document.getElementById("submit");
+const darkModeButton = document.getElementById("dark-mode-toggle")
+const root = document.querySelector(":root")
+
+let dark = false
+
+const colors = {
+    "--text-color": { light: "#475569", dark: "#e2e8f0" },
+    "--heading-color": {light: "#1e293b", dark: "#f1f5f9"},
+    "--background-color": {light: "#f8fafc", dark: "#1e293b"},
+    "--form-background": {light: "#e2e8f0", dark: "#475569"},
+    "--picture-outline": {light: "#cdd5e1", dark: "#64748b"},
+}
 
 const setThenClearMessage = (message) => {
     setTimeout(() => {response.innerText = message}, 4000);
@@ -55,4 +67,25 @@ contactForm.addEventListener("submit", (e) => {
     console.log(e)
     console.log({name, email, message})
     console.log("submit")
+})
+
+darkModeButton.addEventListener("click", () => {
+    console.log("dark button clicked")
+    if(!dark){
+        for(key of Object.keys(colors)){
+            console.log(key, colors)
+            root.style.setProperty(key, colors[key].dark)
+        }
+        dark = true;
+    } else {
+    for(key of Object.keys(colors)){
+        console.log(key, colors)
+        root.style.setProperty(key, colors[key].light)
+    }
+    dark = false;
+    }
+    // see if in light/dark mode?
+    // set local storage?
+    // change css variables
+    // switch out button/toggle classes?
 })
