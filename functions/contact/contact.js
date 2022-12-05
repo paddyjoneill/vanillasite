@@ -12,6 +12,9 @@ const handler = async (event) => {
 
   const payload = event.body;
 
+  console.log({event})
+  console.log({body: event.body})
+
   const { name, email, phone, message, key } = payload;
 
   const utcFromRequest = parseInt(atob(key));
