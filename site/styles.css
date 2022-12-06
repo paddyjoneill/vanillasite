@@ -18,7 +18,7 @@ html {
 }
 
 header {
-    padding: 1rem 0 0;
+    padding: 1rem 1rem 0 1rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -187,7 +187,7 @@ input[type=submit] {
 
 footer {
     max-width: 56rem;
-    padding: 1rem 0;
+    padding: 1rem;
     width: 100%;
     display: flex;
     justify-content: end;

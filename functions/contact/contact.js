@@ -8,21 +8,9 @@ const handler = async (event) => {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
 
-  // const fetch = await import("node-fetch");
-
   const payload = JSON.parse(event.body);
 
-  console.log({event})
-  console.log({body: event.body})
-
   const { name, email, message, key } = payload;
-
-  // const name = event.body.name
-  // const email = event.body.email
-  // const message = event.body.message
-  // const key = event.body.key
-
-  console.log("from payload", {name, email, message})
 
   const utcFromRequest = parseInt(atob(key));
 
@@ -46,8 +34,6 @@ const handler = async (event) => {
       phone: "",
       secret,
   };
-
-  console.log(payloadToForward)
 
   const response = await fetch(url, {
     method: 'POST',
