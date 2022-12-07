@@ -51,7 +51,7 @@ contactForm.addEventListener("submit", (e) => {
 
     const payload = {name, email, message, key}
 
-    const functionAddress = "https://vanilla-dev-site.netlify.app/.netlify/functions/contact"
+    const functionAddress = "https://patrickoneill.dev/.netlify/functions/contact"
 
     const postSettings = {
         method: 'POST',
