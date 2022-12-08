@@ -28,8 +28,9 @@ const generateKey = () => {
     return window.btoa(utc.toString());
 };
 
-contactForm.addEventListener("submit", (e) => {
+contactForm.addEventListener("submit", async (e) => {
     e.preventDefault()
+
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
@@ -47,6 +48,8 @@ contactForm.addEventListener("submit", (e) => {
         return;
     }
 
+    submitButton.disabled = true;
+
     const key = generateKey()
 
     const payload = {name, email, message, key}
@@ -61,12 +64,18 @@ contactForm.addEventListener("submit", (e) => {
         body: JSON.stringify(payload),
     };
 
-    fetch(functionAddress, postSettings)
+    const response = await fetch(functionAddress, postSettings)
 
-    
-    console.log(e)
-    console.log({name, email, message})
-    console.log("submit")
+    if(response.ok){
+        // clear boxes
+        name.value = '';
+        email.value = '';
+        message.value = '';
+        setThenClearMessage('Message Sent!')
+    } else {
+        setThenClearMessage('There was a problem sending your message please try sending an email to hello@patrickoneill.dev instead')
+        submitButton.disabled = false
+    }
 })
 
 darkModeButton.addEventListener("click", () => {
