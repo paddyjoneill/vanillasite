@@ -221,6 +221,10 @@ footer svg {
     fill: var(--heading-color);
 }
 
-footer a:last-child {
+footer a {
     margin-left: 0.75rem;
+}
+
+footer a:first-child {
+    margin-left: 0;
 }
