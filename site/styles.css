@@ -87,7 +87,7 @@ p {
     color: var(--text-color)
 }
 
-.mail-link {
+.mail-link, .link {
     color: inherit;
     font-weight: 500;
 }
