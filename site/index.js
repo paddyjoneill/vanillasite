@@ -64,6 +64,8 @@ contactForm.addEventListener("submit", async (e) => {
         body: JSON.stringify(payload),
     };
 
+    setThenClearMessage("Sending...")
+
     const response = await fetch(functionAddress, postSettings)
 
     if(response.ok){
